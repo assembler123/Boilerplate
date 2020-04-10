@@ -6,4 +6,7 @@ module.exports = function(app) {
         var name = file.substr(0, file.indexOf('.'));
         require('./' + name)(app);
     });
+    app.use("*", (req, res, next) => {
+        //for frontend
+    })
 }
